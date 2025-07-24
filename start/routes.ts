@@ -9,8 +9,7 @@
 
 import router from '@adonisjs/core/services/router'
 import UsersController from '#controllers/users_controller'
-import { middleware  } from "#start/kernel";
 
 router.get('/', async () => 'It works!')
-router.post('/user',[UsersController,'create']);
-router.get('/user/:id',[UsersController,'getUser']);
+
+router.post('/user',[UsersController,'findUser']);
